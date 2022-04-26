@@ -6,6 +6,8 @@
 
 Installing Hugo: 
 > MacOS: brew install hugo
+
+
 > Windows: https://www.techielass.com/how-to-install-hugo-on-windows-10/
 
 If you managed to install Hugo on your machine ([official guide](https://gohugo.io/getting-started/installing/) or an alternative for [Windows](https://www.techielass.com/how-to-install-hugo-on-windows-10/) users), and cloned the repo, you can run `hugo serve`. At this point, you can surf your website from a browser at: [http://localhost:1313/](http://localhost:1313/).
