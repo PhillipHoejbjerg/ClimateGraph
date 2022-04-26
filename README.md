@@ -1,22 +1,12 @@
-# project-website-template
-
-__A website template for your final project__ 🔮
-
-By using this template you would be able to create your own website and deploy it on Github Pages. This project creates a static website, to test it locally (on your machine) you need to install [Hugo](https://gohugo.io/getting-started/installing/). This facilitates you to develop it and display the changes in real-time.
-
-Therefore, you can click on the [***Use this template***](https://github.com/peterampazzo/project-website-template/generate) button 😉
-
-[**DEMO**](https://peterampazzo.github.io/project-website-template/)
-
-More details are explained in depth below. To briefly explain how this project works: 
-* You can write all the content in Markdown using the same syntax you may have already used in Jupyter Notebooks
-* Hugo makes it easier to build all the HTML web pages and reuse the same template across different pages
-* Github Actions allows running for free a job that builds and deploy the website
-* Github Pages offers to publish a static website for free
+# Human-made Climate Change discussion on Reddit
 
 ## ❓ How to
 
 ### Develop
+
+Installing Hugo: 
+> MacOS: brew install hugo
+> Windows: https://www.techielass.com/how-to-install-hugo-on-windows-10/
 
 If you managed to install Hugo on your machine ([official guide](https://gohugo.io/getting-started/installing/) or an alternative for [Windows](https://www.techielass.com/how-to-install-hugo-on-windows-10/) users), and cloned the repo, you can run `hugo serve`. At this point, you can surf your website from a browser at: [http://localhost:1313/](http://localhost:1313/).
 
