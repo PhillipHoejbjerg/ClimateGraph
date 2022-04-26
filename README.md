@@ -5,7 +5,7 @@
 ### Develop
 
 Installing Hugo: 
-> MacOS: brew install hugo
+> MacOS: ```brew install hugo```
 
 
 > Windows: https://www.techielass.com/how-to-install-hugo-on-windows-10/
