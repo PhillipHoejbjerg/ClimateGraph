@@ -19,6 +19,8 @@ Diving further into the data, we can statistically conclude whether the opinion 
 | **Overlapping Authors** | 589           | 3066          | 3591          | 4048          | 8257          | 9763          | 7359          | 3976          |
 | **P-value**             | 0.78          | 0.17          | 0.88          | 0.019         | 0.00036       | 0.00061       | 0.00037       | 0.50          |
 | **Changed Opinion**     | False         | False         | False         | True          | True          | True          | True          | False         |
+
+
 considering the authors overlapping in the networks of any two subsequent years, applying a paired statistical test on all authors
 
 Hvis vi kigger på de specifikke authors der overlapper år til år, kan vi måske se om det er fordi disse skiifter holdning
