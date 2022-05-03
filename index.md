@@ -14,12 +14,11 @@ The plot clearly shows that the discussion of climate on Reddit has been growing
 
 Diving further into the data, we can statistically conclude whether the opinion of specific authors change year to year. We do so by applying a paired statistical test on all authors overlapping in any two subsequent years, throughout the entire period. Since the opinion score distributions from year to year do not follow a Gaussian distribution, the statistical test of choice is the Wilcoxon Signed Rank-Sum test (aka. Wilcoxon paired t-test).
 
-|                         | **2014 - 2015** | **2015 - 2016** | **2016 - 2017** | **2017 - 2018** | **2018 - 2019** | **2019 - 2020** | **2020 - 2021** | **2021 - 2022** |
-|-------------------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|
-| **Overlapping Authors** | 589             | 3066            | 3591            | 4048            | 8257            | 9763            | 7359            | 3976            |
-| **P-value**             | 0.78            | 0.17            | 0.88            | 0.019           | 0.00036         | 0.00061         | 0.00037         | 0.50            |
-| **Changed Opinion**     | False           | False           | False           | True            | True            | True            | True            | False           |
-
+|                         | **2014-2015** | **2015-2016** | **2016-2017** | **2017-2018** | **2018-2019** | **2019-2020** | **2020-2021** | **2021-2022** |
+|-------------------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
+| **Overlapping Authors** | 589           | 3066          | 3591          | 4048          | 8257          | 9763          | 7359          | 3976          |
+| **P-value**             | 0.78          | 0.17          | 0.88          | 0.019         | 0.00036       | 0.00061       | 0.00037       | 0.50          |
+| **Changed Opinion**     | False         | False         | False         | True          | True          | True          | True          | False         |
 considering the authors overlapping in the networks of any two subsequent years, applying a paired statistical test on all authors
 
 Hvis vi kigger på de specifikke authors der overlapper år til år, kan vi måske se om det er fordi disse skiifter holdning
