@@ -73,11 +73,11 @@ So far, we have looked at whether the daily opinion of Redditors is affected by 
 
 To do so, we need to visualize our Reddit data as a network!
 
-![Reddit Network](/docs/assets/full_network.jpg)
+[![Reddit Network](/docs/assets/full_network.jpg)](/docs/assets/full_network.jpg)
 
 The visualisation shows the network of Redditors, where each link corresponds to a correspondence between them, either through replying or being replied to in any of the submissions or comments collected. The colors correspond to the average opinion of each Redditor, based on the average of all their posts.
 An average score of $[-1,-1/3]$ indicates an anti man-made climate change opinion, and will be colored red. $]-1/3, 1/3[$ corresponds to neutral - beige, while $[1/3,1]$ indicates a pro man-made climate change opinion which, aptly, is colored green.
 
-As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors and thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submissions with many commenters, though it could also be a Redditor commenting on a lot of smaller posts. 
+As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors and thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submissions with many commenters, though it could also be a Redditor commenting on a lot of smaller posts.
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
