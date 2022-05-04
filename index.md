@@ -75,14 +75,17 @@ To do so, we need to visualize our Reddit data as a network!
 
 {% include ZoomNetwork1.html %}
 
+
 The visualisation shows the network of Redditors, where each link corresponds to a correspondence between them, either through replying or being replied to in any of the submissions or comments collected. The colors correspond to the average opinion of each Redditor, based on the average of all their posts.
 An average score of <img src="https://render.githubusercontent.com/render/math?math=$[-1,-1/3]$"> indicates an anti man-made climate change opinion, and will be colored red. <img src="https://render.githubusercontent.com/render/math?math=$]-1/3, 1/3[$"> corresponds to neutral - beige, while <img src="https://render.githubusercontent.com/render/math?math=$[1/3,1]$"> indicates a pro man-made climate change opinion which, aptly, is colored green.
 
-As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors and thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submissions with many commenters, though it could also be a Redditor commenting on a lot of smaller posts.
+As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors, thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submission with many commenters, though it could also be a Redditor commenting on a lot of smaller posts.
 
 As mentioned, part of what we'd like to investigate is the concept of echo-chambers - i.e. environments where the opinion of users is reinforced by other users of similar opinion. When studying large networks such as social networks, there are typically a few different characteristics that commonly occur, and one of these characteristics is a community structure. A community structure is defined as groups of nodes that are more connected internally than the rest of the network, e.g. a submission and its comments as seen above. Since this RQ aims at investigating echo-chambers in the network, a social network community structure could naturally occur because of these echo-chambers, thus an algorithm called Louvain will be applied to the network to find these naturally occuring communities, and then these communities will be compared to the opinion of the nodes within it. The echo-chambers could then be indicated by a dominance of pro or anti opinions.
 
-As mentioned, part of what we'd like to investigate is the concept of echo-chambers, i.e. environments where the opinion of users is reinforced by other users of similar opinion. This is explored through the concept of community structures - groups of nodes that are more connected internally than the rest of the network - as echo-chambers naturally would create some of these strongly interconnected nodes. These
+As mentioned, part of what we'd like to investigate is the concept of echo-chambers, i.e. environments where the opinion of users is reinforced by other users of similar opinion. This is explored through the concept of community structures - groups of nodes that are more connected internally than the rest of the network - as echo-chambers naturally would create some of these strongly interconnected nodes.
+
+In order to find these so-called communities, the Louvain algorithm will be applied on the network. Next, we will look at the opinion of the nodes within them, as echo-chambers would be indicated by a dominance of pro or anti opinions.
 
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
