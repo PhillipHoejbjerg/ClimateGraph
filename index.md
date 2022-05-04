@@ -87,6 +87,6 @@ In order to find these so-called communities, the Louvain algorithm will be appl
 
 {% include ZoomNetwork2.html %}
 
-
+The Louivain partition of the network is seen above, while the original opinion-partition can be seen by clicking on the preview below. 
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
