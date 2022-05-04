@@ -8,7 +8,7 @@ So let's get started!
 
 Firstly, we'd like to see how our data evolves on a yearly basis. The following plot shows how the size of the network evolves through time, scattered with regards to the average yearly opinion score, ranging from -1, Anti-, to 1, Pro- "man-made" climate change opinion.
 
-{% include Fig0sizePerYear.html %}
+{% include TemporalEvolution.html %}
 
 The plot clearly shows that the discussion of climate on Reddit has been growing throughout the specific period. Note the tiny dot present in 2014, compared to the moderately sized point of 2022 - based on only 4 months of data. Furthermore it seems as though the general opinion is upward-trending, though minimally so. The average yearly opinion of the entire period is on the anti-side of the scale, very close to neutral however.
 
@@ -44,7 +44,7 @@ Scattering the various events provided from the EMDAT dataset on top of the prev
 
 But just taking the time of event into account might not be enough - instead we can plot the number of posts, as well as the opinion, as a function of the **Severity** of the disaster - understood as the average amount of people affected by disasters on any given day. The plots are plotted in log-log scale for easier visualization.
 
-{% include fig4_SeverityVS.html %}
+{% include fig5_SeverityVS.html %}
 
 The two plots seem show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlations disagrees! With Pearson correlations of p-value 0.023 and 0.16 respectively, we can't conclude any correlation based on the opinion (with 95% confidence) - but we **can** say that the severity is correlated with the number of posts!
 
