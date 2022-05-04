@@ -36,7 +36,7 @@ We will try to answer this by diving deeper into the data, looking at the averag
 
 Plotting the daily opinion scores underneath the daily number of posts don't immediately provide any proof of one affecting the other. In fact, they don't seem to be correlated at all! Plotting them, one as a function of the other however, seems to tell a different story.
 
-{% Fig2numPostsOpinion.html %}
+{% include Fig2numPostsOpinion.html %}
 
 Now this is more interesting! The plot seems to show that negative avg. opinion, i.e. leaning toward Anti man-made climate change, contain days that generate way more posts than days of Pro opinion - finally, a Pearson correlation test with a p-value of 0.0000 agrees, the two are correlated!
 
@@ -48,6 +48,6 @@ Scattering the various events provided from the EMDAT dataset on top of the prev
 
 But just taking the time of event into account might not be enough - instead we can plot the number of posts, as well as the opinion, as a function of the **Severity** of the disaster - understood as the average amount of people affected by disasters on any given day. The plots are plotted in log-log scale for easier visualization.
 
-{% fig4_affectedVsPosts.html %}
+{% include fig4_affectedVsPosts.html %}
 
-{% fig5_affectedVsOpinion.html %}
+{% include fig5_affectedVsOpinion.html %}
