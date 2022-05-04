@@ -105,7 +105,30 @@ Diving into each of these communities, we can take a look at the distribution of
 
 {% include ZoomNetwork4.html %}
 
-First of all, the figure clearly shows a majority of neutral opinions within each opinion, something that comes as no surprise after seeing the network. The top-most plot is sorted based on size of each community, while the bottom-most has been normalized to show the distribution within each. Once only considering the distribution of Pro vs. Anti, there seem to be a trend of Anti dominating the communities - something we also saw way back in the first plot of the blog-post. In general, none of the communities indicate echo-chambers of any opinion.
+First of all, the figure clearly shows a majority of neutral opinions within each community, something that comes as no surprise after seeing the network. The top-most plot is sorted based on size of each community, while the bottom-most has been normalized to show the distribution within each. Once only considering the distribution of Pro vs. Anti, there seem to be a trend of Anti dominating the communities - something we also saw way back in the first plot of the blog-post. In general, however, none of the communities indicate echo-chambers of any opinion.
+
+**Diving deeper into communities**
+
+In order to do qualitative analysis on the communities and their textual contents, we're diving further into 4 specific communities, based on the following criterias;
+
+> Neutral: Community with the largest proportion of neutral opinions.
+> Anti: Community with the largest proportion of anti opinions.
+> Pro: Community with the largest proportion of pro opinions.
+> Balanced: Community with the smallest difference between its anti and pro proportions.
+
+{% include bar_all_4.html %}
+
+The bar-plots showing the distribution of each of the 4 communities is seen above, while the wordclouds, based on only the unique words of each community, is visualized below.
+
+{% include ZoomNetwork6.html %}
+
+The Pro- wordcloud is full of words like 'forage', 'poultry', 'butcher', 'food' and 'science', while Anti- has words like 'superstitious', 'emission', 'repercussion' etc. - All words you'd expect to see in a climate debate. The blue *balanced* wordcloud however, funnily enough, seems as though it's made up of characters and places from *Game of Thrones*, such as 'Qarth', 'Daenerys' and 'Ramsay'.
+
+Finally, the community-network of each community is visualized below. The second network, 'High on Anti', could indicate an echo-chamber, as the larger node has a majority of red-colored nodes around it. Overall, however, that is the only indication of any echo-chambers so far.
+
+{% include ZoomNetwork5.html %}
+
+The network could also indicate that the opinion of the hub is influenced by the larger middle-node, which is why we'll take a look at authorities and their effect on the hubs surrounding them later in this blogpost.
 
 
 
