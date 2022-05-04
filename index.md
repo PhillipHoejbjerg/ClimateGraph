@@ -73,7 +73,7 @@ So far, we have looked at whether the daily opinion of Redditors is affected by 
 
 To do so, we need to visualize our Reddit data as a network!
 
-[![Reddit Network](/docs/assets/full_network.jpg)](/docs/assets/full_network.jpg)
+[![Reddit Network](/docs/assets/full_network.jpg)](https://github.com/PhillipHoejbjerg/ClimateGraph/blob/main/docs/assets/full_network.jpgg)
 
 The visualisation shows the network of Redditors, where each link corresponds to a correspondence between them, either through replying or being replied to in any of the submissions or comments collected. The colors correspond to the average opinion of each Redditor, based on the average of all their posts.
 An average score of $[-1,-1/3]$ indicates an anti man-made climate change opinion, and will be colored red. $]-1/3, 1/3[$ corresponds to neutral - beige, while $[1/3,1]$ indicates a pro man-made climate change opinion which, aptly, is colored green.
