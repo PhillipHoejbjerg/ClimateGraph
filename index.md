@@ -101,7 +101,9 @@ The table shows how the original partition of only 3 communities is an almost un
 
 Diving into each of these communities, we can take a look at the distribution of opinions within them. Ideally, if we were to prove echo-chambers, we'd like to see a majority of one opinion within each, however as seen below, that is not the case.
 
+{% include ZoomNetwork4.html %}
 
+First of all, the figure clearly shows a majority of neutral opinions within each opinion, something that comes as no surprise after seeing the network. The top-most plot is sorted based on size of each community, while the bottom-most has been normalized to show the distribution within each. Once only considering the distribution of Pro vs. Anti, there seem to be a trend of Anti dominating the communities - something we also saw way back in the first plot of the blog-post. In general, none of the communities indicate echo-chambers of any opinion. 
 
 
 
