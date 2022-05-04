@@ -77,25 +77,31 @@ To do so, we need to visualize our Reddit data as a network!
 
 
 The visualisation shows the network of Redditors, where each link corresponds to a correspondence between them, either through replying or being replied to in any of the submissions or comments collected. The colors correspond to the average opinion of each Redditor, based on the average of all their posts.
-An average score of <img src="https://render.githubusercontent.com/render/math?math=$[-1,-1/3]$"> indicates an anti man-made climate change opinion, and will be colored red. <img src="https://render.githubusercontent.com/render/math?math=$]-1/3, 1/3[$"> corresponds to neutral - beige, while <img src="https://render.githubusercontent.com/render/math?math=$[1/3,1]$"> indicates a pro man-made climate change opinion which, aptly, is colored green.
+An average score of <img src="https://render.githubusercontent.com/render/math?math=$[-1,-1/3]$"> indicates an anti man-made climate change opinion, and will be colored red. <img src="https://render.githubusercontent.com/render/math?math=$]-1/3, 1/3[$"> corresponds to neutral, beige, while <img src="https://render.githubusercontent.com/render/math?math=$[1/3,1]$"> indicates a pro man-made climate change opinion which, aptly, is colored green.
 
-As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors, thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submission with many commenters, though it could also be a Redditor commenting on a lot of smaller posts.
+As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors, thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submissions with many commenters, though it could also be a Redditors commenting on a lot of smaller posts.
 
 As mentioned, part of what we'd like to investigate is the concept of echo-chambers, i.e. environments where the opinion of users is reinforced by other users of similar opinion. This is explored through the concept of community structures - groups of nodes that are more connected internally than the rest of the network - as echo-chambers naturally would create some of these strongly interconnected nodes.
 
-In order to find these so-called communities, the Louvain algorithm will be applied on the network. Next, we will look at the opinion of the nodes within them, as echo-chambers would be indicated by a dominance of pro or anti opinions. This is based on textual information within communities, and as such we have, arbitrarily, excluded communities containing less than 80 nodes.
+In order to find these so-called communities, the Louvain algorithm will be applied on the network. Next, we will look at the opinion of the nodes within them, as echo-chambers would be indicated by a dominance of pro or anti opinions. This is based on *textual information* within communities, and as such we have, arbitrarily, excluded communities containing *less* than 80 nodes.
 
 {% include ZoomNetwork3.html %}
 
-As seen in the plot above, the community sizes are described by a power-law, with most communities being of relatively small sizes, and as such this decision, though we find it necessary, will result in a lot of information loss. With this cutoff we're left with the 100 largest communities, out of what started out as being 8706. However, since almost 8000 of the removed communities consisted of 3 nodes or less, this decision only results in a removal of 24.94% of the Redditors in the network. 
+As seen in the plot above, the community sizes are described by a power-law, with most communities being of relatively small sizes, and as such, this decision - though we find it necessary - will result in a lot of information loss. With this cut-off we're left with the 100 largest communities, out of what started out as being 8706. However, since almost 8000 of the removed communities consisted of 3 nodes or less, this decision only results in a removal of 24.94% of the Redditors in the network.
 
 {% include ZoomNetwork2.html %}
 
 The final network, colored based on the Louivain partition, is seen above, while the original opinion-partition can be seen by clicking on the preview below the image. The modularity of the networks - the measure of how well a network is split into submodules - is summarized in the table below.
 
-|            | **Original** | **Louvain** |
-|:----------:|:------------:|-------------|
-| Modularity |    0.0082    | 0.92        |
+|                | **Original** | **Louvain** |
+|:--------------:|:------------:|-------------|
+| **Modularity** |    0.0082    | 0.92        |
+
+The table shows how the original partition of only 3 communities is an almost undivided network, meaning there don't seem to be much of a rule about who's talking to who based on opinion. The newly found partitions have way higher modularity, however, that comes as no surprise as it's been split into 100 different communities.
+
+Diving into each of these communities, we can take a look at the distribution of opinions within them. Ideally, if we were to prove echo-chambers, we'd like to see a majority of one opinion within each, however as seen below, that is not the case.
+
+
 
 
 
