@@ -1,0 +1,19 @@
+baseURL = "https://philliphoejbjerg.github.io/ClimateGraph/"
+ title = "Human-made Climate Change discussion on Reddit"
+ description = "This is a project description"
+ relativeURLs = true
+ theme = "theme"
+ [params]
+     authors = ["Albert K. Jacobsen", "Aron D. Jacobsen", "Phillip C. Højbjerg"]
+     notebook = "/explainer-notebook.html"
+     data = "https://drive.google.com"
+     github = "https://github.com/albertkjoller/Reddit-ClimateGraph"
+     [[params.nav]]
+         label = "Data"
+         link = "/data-description"
+     [[params.nav]]
+         label = "Network"
+         link = "/network-analysis"
+     [[params.nav]]
+         label = "Text"
+         link = "/text-analysis"

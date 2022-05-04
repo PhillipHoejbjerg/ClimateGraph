@@ -1,8 +1,14 @@
-<h1> Human-made Climate Change discussion on Reddit </h1>
+---
+ title: Human-made Climate Change discussion on Reddit
+ layout: single
+ next: data-description
+ ---
 
 This blog-post investigates the phenomena of Climate Change, more specifically the "man-made or not"-discussion on Reddit and which factors influence the opinion of Redditors regarding the Climate Change discussion.
 
-The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through out [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph)The investigation will take us through the evolution of the opinion of Redditors through time, as well as look at some of the multiple different factors that could affect the opinion of the Redditors - namely the amount of engagement on the relevant parts of the social network, the severity of natural disasters in the real world, as well as whether the opinion of Redditors are affected by what is known as echo-chambers, or specific authorities in the social network.
+The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through out [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph).
+
+The investigation will take us through the evolution of the opinion of Redditors through time, as well as look at some of the multiple different factors that could affect the opinion of the Redditors - namely the amount of engagement on the relevant parts of the social network, the severity of natural disasters in the real world, as well as whether the opinion of Redditors are affected by what is known as echo-chambers, or specific authorities in the social network.
 
 So let's get started!
 
@@ -64,6 +70,12 @@ After making sure that the time-series are stationary - independent of time - th
 | Severity -> Opinion | 0.84        |
 
 However, the p-values suggests that Severity neither Granger-causes number of posts or the opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
+
+So far, we have looked at whether the daily opinion of Redditors is affected by the number of posts or outside events, such as natural disasters. Now, our investigation will take a shift - For the next part of the investigation, we'd like to look at the interaction *between* Redditors, and how the opinion of one can affect the opinions of others.
+
+To do so, we need to visualize our Reddit data as a network!
+
+![]()
 
 
 
