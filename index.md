@@ -2,7 +2,7 @@
 
 <h1> Human-made Climate Change discussion on Reddit </h1>
 
-![Reddit Climate Change](docs/assets/Reddit-Climate-Change-Poster2445147325.jpegdocs/assets/Reddit-Climate-Change-Poster2445147325.jpeg)
+![Reddit Climate Change](docs/assets/Reddit-Climate-Change-Poster2445147325.jpeg)
 
 This blog-post investigates the phenomena of Climate Change, more specifically the "man-made or not"-discussion on Reddit and which factors influence the opinion of Redditors regarding the Climate Change discussion.
 
