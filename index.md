@@ -81,8 +81,10 @@ An average score of $[-1,-1/3]$ indicates an anti man-made climate change opinio
 
 As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors and thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submissions with many commenters, though it could also be a Redditor commenting on a lot of smaller posts.
 
-As mentioned, part of what we'd like to investigate is the concept of echo-chambers - i.e. environments where the opinion users is reinforced by other users of similar opinion.
+As mentioned, part of what we'd like to investigate is the concept of echo-chambers - i.e. environments where the opinion of users is reinforced by other users of similar opinion. When studying large networks such as social networks, there are typically a few different characteristics that commonly occur, and one of these characteristics is a community structure. A community structure is defined as groups of nodes that are more connected internally than the rest of the network, e.g. a submission and its comments as seen above. Since this RQ aims at investigating echo-chambers in the network, a social network community structure could naturally occur because of these echo-chambers, thus an algorithm called Louvain will be applied to the network to find these naturally occuring communities, and then these communities will be compared to the opinion of the nodes within it. The echo-chambers could then be indicated by a dominance of pro or anti opinions.
 
+As mentioned, part of what we'd like to investigate is the concept of echo-chambers - i.e. environments where the opinion of users is reinforced by other users of similar opinion. 
+A community structure is defined as a group of nodes that are more connected internally than the rest of the network.
 
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
