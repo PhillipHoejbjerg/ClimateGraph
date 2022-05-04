@@ -4,13 +4,13 @@
 
 This blog-post investigates the phenomena of Climate Change, more specifically the "man-made or not"-discussion on Reddit and which factors influence the opinion of Redditors regarding the Climate Change discussion.
 
-The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through out [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph).
+The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. Each comment has been labeled with an opinion score, Pro, Anti or Neutral - understood as either believing, not believing or being neutral about man-made climate change. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through our [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph).
 
-The investigation will take us through the evolution of the opinion of Redditors through time, as well as look at some of the multiple different factors that could affect the opinion of the Redditors - namely the amount of engagement on the relevant parts of the social network, the severity of natural disasters in the real world, as well as whether the opinion of Redditors are affected by what is known as echo-chambers, or specific authorities in the social network.
+The investigation will take us through the evolution of the opinion of Redditors through time, as well as look at some of the multiple different factors that could affect the opinion of the Redditors - namely the amount of engagement on the relevant subreddits of the social network, the severity of natural disasters in the real world, as well as whether the opinion of Redditors are affected by what is known as echo-chambers, or specific authorities in the social network.
 
 So let's get started!
 
-Firstly, we'd like to see how our data evolves on a yearly basis. The following top-most plot shows how the size of the network evolves through time, scattered with regards to the average yearly opinion score, ranging from -1, Anti-, to 1, Pro- "man-made" climate change opinion. The bottom-most plot is a more informative measure of the amount of Redditors per year.
+Firstly, we'd like to see how our data evolves on a yearly basis. The top-most plot of the following shows how the size of the network evolves through time, scattered with regards to the average yearly opinion score, ranging from -1 to 1, Anti to Pro. The bottom-most plot is a more informative measure of the amount of Redditors per year.
 
 {% include TemporalEvolution.html %}
 
@@ -28,7 +28,7 @@ This is tested by applying a paired statistical test on all Redditors present in
 
 Though we can't say much about the years prior, we see that the opinion of the specific Redditors change from year to year in the period of 2017-2021, with 95% confidence!
 
-However, what could cause a change of opinion among the Redditors? - Is it simply due to an influx of Reddit submissions or comments, or could outside sources such as Natural Disasters be the reason of the change?
+However, what could cause a change of opinion among the Redditors? - Is it simply due to an influx of Reddit submissions or comments, or could outside sources such as Natural Disasters be the reason of change?
 
 We will try to answer this by diving deeper into the data, looking at the average *daily* opinion of the Redditors! - zooming in will provide you the individual dates.
 
@@ -50,7 +50,7 @@ But just taking the time of event into account might not be enough - instead we 
 
 {% include fig5_SeverityVS.html %}
 
-The two plots seem show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlations disagrees! With Pearson correlations of p-value 0.023 and 0.16 respectively, we can't conclude any correlation based on the opinion (with 95% confidence) - but we **can** say that the severity is correlated with the number of posts!
+The two plots seem to show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlations disagrees! With Pearson correlations of p-value 0.023 and 0.16 respectively, we can't conclude any correlation based on the opinion (with 95% confidence) - but we *can* say that the severity is correlated with the number of posts!
 
 Thinking of the kinds of data we have available, we can say with certainty that the number of posts, don't influence the severity of Natural Disasters - at least we hope not, as that would mean that posting on Reddit strengthens natural disasters :O)
 
@@ -67,13 +67,13 @@ After making sure that the time-series are stationary - independent of time - th
 | Severity -> Posts   | 0.28        |
 | Severity -> Opinion | 0.84        |
 
-However, the p-values suggests that Severity neither Granger-causes number of posts or the opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
+However, the p-values suggests that the Severity don't Granger-cause neither number of posts or opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
 
 So far, we have looked at whether the daily opinion of Redditors is affected by the number of posts or outside events, such as natural disasters. Now, our investigation will take a shift - For the next part of the investigation, we'd like to look at the interaction *between* Redditors, and how the opinion of one can affect the opinions of others.
 
 To do so, we need to visualize our Reddit data as a network!
 
-![]()
+![Reddit Network](/docs/assets/full_network.jpg)
 
 
 
