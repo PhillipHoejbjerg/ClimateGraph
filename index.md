@@ -2,11 +2,11 @@
 
 This blog-post investigates the phenomena of Climate Change, more specifically the "man-made or not"-discussion on Reddit and which factors influence the opinion of Redditors regarding the Climate Change discussion.
 
-The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The investigation will take us through the evolution of the opinion of Redditors through time, as well as look at some of the multiple different factors that could affect the opinion of the Redditors - namely the amount of engagement on the relevant parts of the social network, the severity of natural disasters in the real world, as well as whether the opinion of Redditors are affected by what is known as echo-chambers, or specific authorities in the social network.
+The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through out [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph)The investigation will take us through the evolution of the opinion of Redditors through time, as well as look at some of the multiple different factors that could affect the opinion of the Redditors - namely the amount of engagement on the relevant parts of the social network, the severity of natural disasters in the real world, as well as whether the opinion of Redditors are affected by what is known as echo-chambers, or specific authorities in the social network.
 
 So let's get started!
 
-Firstly, we'd like to see how our data evolves on a yearly basis. The following plot shows how the size of the network evolves through time, scattered with regards to the average yearly opinion score, ranging from -1, Anti-, to 1, Pro- "man-made" climate change opinion.
+Firstly, we'd like to see how our data evolves on a yearly basis. The following top-most plot shows how the size of the network evolves through time, scattered with regards to the average yearly opinion score, ranging from -1, Anti-, to 1, Pro- "man-made" climate change opinion. The bottom-most plot is a more informative measure of the amount of Redditors per year.
 
 {% include TemporalEvolution.html %}
 
@@ -50,11 +50,11 @@ The two plots seem show the same story, namely that the severity of the natural 
 
 Thinking of the kinds of data we have available, we can say with certainty that the number of posts, don't influence the severity of Natural Disasters - at least we hope not, as that would mean that posting on Reddit strengthens natural disasters :O)
 
-But the opposite way of thinking is extremely interesting - do the severity of natural disasters directly affect the size of debate on Reddit or even the opinion? - The perfect candidate for a Granger causality test!
+But the opposite way of thinking is extremely interesting - do the severity of natural disasters directly affect the size of debate on Reddit or maybe even the opinion? - The perfect candidate for a Granger causality test!
 
-{% include fig6_Granger.html %}
+{% include fig6_Granger_3plots.html %}
 
-The Granger test is a test which indicates whether one time-series can help forecasting another - and as such could also be thought of as incorporating some form of attention span into the causality test, as we know the two won't happen simultaneously! Thus, what we'd like to check is whether the data within the downmost subplot is affecting the trends in the two topmost subplots.
+The Granger Causality test is a test which indicates whether one time-series can help forecasting another - and as such could also be thought of as incorporating some form of attention span into the causality test, as we know the two won't happen simultaneously! Thus, what we'd like to check is whether the data within the downmost subplot is affecting the trends in the two topmost subplots.
 
 After making sure that the time-series are stationary - independent of time - through an ADF-test, we can perform the Granger causality test.
 
@@ -63,7 +63,7 @@ After making sure that the time-series are stationary - independent of time - th
 | Severity -> Posts   | 0.28        |
 | Severity -> Opinion | 0.84        |
 
-The p-values however suggests that Severity neither Granger-causes number of posts or the opinion of the Redditors. As such, though the two are correlated, we can't prove that one is affecting the other.
+However, the p-values suggests that Severity neither Granger-causes number of posts or the opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
 
 
 
