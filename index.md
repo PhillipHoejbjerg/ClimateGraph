@@ -17,24 +17,37 @@ But one begins to wonder; is the upward trend due to Redditors changing their op
 This is tested by applying a paired statistical test on all Redditors overlapping in any two subsequent years, throughout the entire period. In other words, we test whether each Redditor, present in the network in any two subsequent years, has a significant change of opinion. Since the opinion score distributions from year to year don't follow a Gaussian distribution, the statistical test of choice is the Wilcoxon Signed Rank-Sum test (aka. Wilcoxon paired t-test).
 
 <center>
+
 |                         | **2014-2015** | **2015-2016** | **2016-2017** | **2017-2018** | **2018-2019** | **2019-2020** | **2020-2021** | **2021-2022** |
 |-------------------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
 | **Recurring Redditors** | 589           | 3066          | 3591          | 4048          | 8257          | 9763          | 7359          | 3976          |
 | **P-value**             | 0.78          | 0.17          | 0.88          | 0.019         | 0.00036       | 0.00061       | 0.00037       | 0.50          |
 | **Changed Opinion**     | False         | False         | False         | True          | True          | True          | True          | False         |
+
 </center>
 
-We see that the opinion of the specific Redditors change from year to year in the period of 2017-2021, with 95% confidence.
+Though we can't say much about the years prior, we see that the opinion of the specific Redditors change from year to year in the period of 2017-2021, with 95% confidence!
 
 However, what could cause a change of opinion among the Redditors? - Is it simply due to an influx of Reddit submissions or comments, or could outside sources such as Natural Disasters be the reason of the change?
 
-We will try to answer this by diving deeper into the data, looking at the average daily opinion of the Redditors!
+We will try to answer this by diving deeper into the data, looking at the average daily opinion of the Redditors! - zooming in provides the individual dates.
 
 {% include Fig1hypeVsOpinion.html %}
 
+Plotting the daily opinion scores underneath the daily number of posts don't immediately provide any proof of one affecting the other. In fact, they don't seem to be correlated at all! Plotting them, one as a function of the other however, seems to tell a different story.
 
+{% Fig2numPostsOpinion.html %}
 
+Now this is more interesting! The plot seems to show that negative avg. opinion, i.e. leaning toward Anti man-made climate change, contain days that generate way more posts than days of Pro opinion - finally, a Pearson correlation test with a p-value of 0.0000 agrees, the two are correlated!
 
+Next - we'd like to see how outside sources, namely Natural Disasters, affect the opinion of the Redditors.
 
+{% include fig3naturalDisasters.html %}
 
-Individual dates are available by zooming in.
+Scattering the various events provided from the EMDAT dataset on top of the previously seen plot, provides a timeline of the various natural disasters. It clearly shows how different disaster-types appear at different times of year - however one would expect the events to stay within the local minima- and maxima- if they were to influence the opinion of Redditors, something we don't see in this instance - once again it is advised to zoom into the plot to look at the individually scattered points.
+
+But just taking the time of event into account might not be enough - instead we can plot the number of posts, as well as the opinion, as a function of the **Severity** of the disaster - understood as the average amount of people affected by disasters on any given day. The plots are plotted in log-log scale for easier visualization.
+
+{% fig4_affectedVsPosts.html %}
+
+{% fig5_affectedVsOpinion.html %}
