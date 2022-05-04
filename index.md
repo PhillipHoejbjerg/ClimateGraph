@@ -2,6 +2,8 @@
 
 <h1> Human-made Climate Change discussion on Reddit </h1>
 
+![Reddit Climate Change](docs/assets/Reddit-Climate-Change-Poster2445147325.jpegdocs/assets/Reddit-Climate-Change-Poster2445147325.jpeg)
+
 This blog-post investigates the phenomena of Climate Change, more specifically the "man-made or not"-discussion on Reddit and which factors influence the opinion of Redditors regarding the Climate Change discussion.
 
 The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. Each comment has been labeled with an opinion score through machine learning, either Pro, Anti or Neutral - understood as either believing, not believing or being neutral about man-made climate change. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through our [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph).
@@ -103,7 +105,7 @@ Diving into each of these communities, we can take a look at the distribution of
 
 {% include ZoomNetwork4.html %}
 
-First of all, the figure clearly shows a majority of neutral opinions within each opinion, something that comes as no surprise after seeing the network. The top-most plot is sorted based on size of each community, while the bottom-most has been normalized to show the distribution within each. Once only considering the distribution of Pro vs. Anti, there seem to be a trend of Anti dominating the communities - something we also saw way back in the first plot of the blog-post. In general, none of the communities indicate echo-chambers of any opinion. 
+First of all, the figure clearly shows a majority of neutral opinions within each opinion, something that comes as no surprise after seeing the network. The top-most plot is sorted based on size of each community, while the bottom-most has been normalized to show the distribution within each. Once only considering the distribution of Pro vs. Anti, there seem to be a trend of Anti dominating the communities - something we also saw way back in the first plot of the blog-post. In general, none of the communities indicate echo-chambers of any opinion.
 
 
 
