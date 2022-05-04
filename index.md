@@ -83,14 +83,20 @@ As is seen, the network is dominated by the beige color - which might come as a 
 
 As mentioned, part of what we'd like to investigate is the concept of echo-chambers, i.e. environments where the opinion of users is reinforced by other users of similar opinion. This is explored through the concept of community structures - groups of nodes that are more connected internally than the rest of the network - as echo-chambers naturally would create some of these strongly interconnected nodes.
 
-In order to find these so-called communities, the Louvain algorithm will be applied on the network. Next, we will look at the opinion of the nodes within them, as echo-chambers would be indicated by a dominance of pro or anti opinions.
+In order to find these so-called communities, the Louvain algorithm will be applied on the network. Next, we will look at the opinion of the nodes within them, as echo-chambers would be indicated by a dominance of pro or anti opinions. This is based on textual information within communities, and as such we have, arbitrarily, excluded communities containing less than 80 nodes.
+
+{% include ZoomNetwork3.html %}
+
+As seen in the plot above, the community sizes are described by a power-law, with most communities being of relatively small sizes, and as such this decision, though we find it necessary, will result in a lot of information loss. With this cutoff we're left with the 100 largest communities, out of what started out as being 8706. However, since almost 8000 of the removed communities consisted of 3 nodes or less, this decision only results in a removal of 24.94% of the Redditors in the network. 
 
 {% include ZoomNetwork2.html %}
 
-The Louivain partition of the network is seen above, while the original opinion-partition can be seen by clicking on the preview below the image. The modularity of the networks - the measure of how well a network is split into submodules - is visualized in the table below.
+The final network, colored based on the Louivain partition, is seen above, while the original opinion-partition can be seen by clicking on the preview below the image. The modularity of the networks - the measure of how well a network is split into submodules - is summarized in the table below.
 
 |            | **Original** | **Louvain** |
 |:----------:|:------------:|-------------|
 | Modularity |    0.0082    | 0.92        |
+
+
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
