@@ -1,8 +1,3 @@
----
-layout: post
-title:  "Human-made Climate Change discussion on Reddit"
-date:   2022-05-05 22:00:43 +0200
----
 
 <h1> Human-made Climate Change discussion on Reddit </h1>
 
