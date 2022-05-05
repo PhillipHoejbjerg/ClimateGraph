@@ -137,20 +137,45 @@ The second network, 'High on Anti', looks like it could indicate an echo-chamber
 
 **Authorities and hubs**
 
-The investigation of authority-nodes and the hubs surrounding them now brings us back to scale of the 2020 network graph. We're categorizing authority-nodes as Redditors of high importance, measured in total amount of Reddit-awards received per Redditor, as well as Redditors with high in-degree. The following will bring statistical tests on the opinion of both of these types of Authorities, compared to the hubs surrounding them - hoping to prove that the authority nodes are able to affect its surroundings. In other words - we want to see whether the opinion of Redditors is influenced by other Redditors of higher status.
+The investigation of authority-nodes and the hubs surrounding them now brings us back to scale of the entire 2020 network graph. We're categorizing authority-nodes as Redditors of high importance, measured in total amount of Reddit-awards received per Redditor, as well as Redditors with high in-degree. The following will bring statistical tests on the opinion of both of these types of Authorities, compared to the hubs surrounding them - hoping to prove that the authority nodes are able to affect its surroundings. In other words - we want to see whether the opinion of Redditors is influenced by other Redditors of higher status.
 
-First off - as Reddit-awards are the highest form of recognition one Redditor can give another, the *award-based* authorities are defined as any Redditor having 1 award or higher - this definition leaves us with 135 authority-Redditors in the Reddit-graph. Meanwhile, the *in-degree based* authorities are defined as any node with 50 or more in-going edges - meaning, any Redditor who has been answered by at least 50 other Redditors regarding the climate debate in the year of 2020 - leaving us with 98 authorities.
+First off - as Reddit-awards are the highest form of recognition a Redditor can give another, the *award-based* authorities are defined as any Redditor having 1 award or higher - this definition leaves us with 135 authority-Redditors in the Reddit-graph. Meanwhile, the *in-degree based* authorities are defined as any node with 50 or more in-going edges - meaning, any Redditor who has been answered by at least 50 other Redditors regarding the climate debate in the year of 2020 - leaving us with 98 authorities.
 
-The award-based authorities have hubs of sizes 1 to 646, while the in-degree authorities have hubs of sizes 51 to 732, clearly influenced by the individual definition of authority we have given them.
+The award-based authorities have hubs of sizes 0 to 646, while the in-degree authorities have hubs of sizes 51 to 732, clearly influenced by the individual definition of authority we have given them - the ten "hubs" of size 0, and their corresponding authorities, have been removed from analysis, as empty hubs can't be regarded as hubs.
 
 The distribution of opinion-score per authority, as well as the avg. opinion score of their corresponding hub is visualized for each of the authority-definitions in the plot below:
 
 {% include ZoomNetwork7.html %}
 
+The plot shows a clear tendency of the opinion-score of the authorities being scattered across a larger range than that of the hubs - which usually is closer to 0. This comes as no surprise, as the hubs are an average of a much larger group, and as such will easier be brought towards zero - as that is also the value of being *neutral* of opinion, which the majority of Redditors are. It could also be expected that posts of stronger opinion lead to more traction on the social network, and as such authorities would naturally be of a larger spectrum than that of the hubs.
+
+The mean opinion-scores of the authorities as well as their hubs are seen below.
+
+|                            | **In-degree** | **Awards** |
+|----------------------------|:--------------:|:----------:|
+| **Avg. Authority opinion** |    -0.027537   |  -0.05783  |
+| **Avg. Hub opinion**       |    -0.056896   |  -0.05791  |
 
 
+As seen, the mean values between hub and authority are quite similar, which come as no surprise after seeing the plot - suggesting that we won't be able to conclude that authorities are able to affect the opinion of their hubs. However, the analysis can't be done without a statistical test!
 
+As the standard unpaired t-test is a parametric test, it means that the variance of the variables tested, should be of similar size. Calculating the variance of the two, we see the following;
 
+|                            | **In-degree** | **Awards** |
+|----------------------------|:--------------:|:----------:|
+| **Var. Authority opinion** |    0.025611    |  0.032201  |
+| **Var. Hub opinion**       |    0.002478    |  0.006190  |
 
+However, the variance of authority- vs. hub-opinion can't be regarded similar for either of the authority-definitions. As such, we'll need the Welch's t-test!
+
+|             | **Awards** | **In-degree** |
+|-------------|:----------:|:-------------:|
+| **P-value** |    0.99    |     0.086     |
+
+The two statistical tests show very different results!! However, the null-hypothesis, being that authority opinion is not different from the hub-opinion, cannot be rejected in either of the two authority-definitions at a confidence level of 95%.
+
+It is worth mentioning however, that a confidence level of 90% would flip the conclusion about the in-degree authorities! However, as the means of both the authority and hub are so close to being neutral, we can't possibly confidently say that authorities affect the opinion of others - even at 90% confidence.  
+
+Thus concludes our analysis of the Climate Change debate on the social network of Reddit. Though the analysis has taken us far and wide, into which factors can influence the opinion of Redditors regarding climate change, our statistical tests have time after time been unable to reject our null-hypotheses. We were however able to conclude that the opinion of Redditors regarding climate change was correlated with the amount of posts on any given day, while we also saw correlation between number of posts and the severity of climate change events on any given day, based on the amount of people affected. However, though we saw correlation, we weren't able to conclude that the severity Granger-caused the number of posts, and much less was unable to conclude any correlation to the opinion. Once taking the analysis into a yearly perspective, looking at the influence Redditors have on one another, both in the case of echo-chambers and high-authority Redditors, we weren't able to conclude what we'd hoped, namely that the opinion of Redditors is reinforced or affected by the opinion of others.
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
