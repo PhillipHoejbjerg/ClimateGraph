@@ -137,4 +137,20 @@ The second network, 'High on Anti', looks like it could indicate an echo-chamber
 
 **Authorities and hubs**
 
+The investigation of authority-nodes and the hubs surrounding them now brings us back to scale of the 2020 network graph. We're categorizing authority-nodes as Redditors of high importance, measured in total amount of Reddit-awards received per Redditor, as well as Redditors with high in-degree. The following will bring statistical tests on the opinion of both of these types of Authorities, compared to the hubs surrounding them - hoping to prove that the authority nodes are able to affect its surroundings. In other words - we want to see whether the opinion of Redditors is influenced by other Redditors of higher status.
+
+First off - as Reddit-awards are the highest form of recognition one Redditor can give another, the *award-based* authorities are defined as any Redditor having 1 award or higher - this definition leaves us with 135 authority-Redditors in the Reddit-graph. Meanwhile, the *in-degree based* authorities are defined as any node with 50 or more in-going edges - meaning, any Redditor who has been answered by at least 50 other Redditors regarding the climate debate in the year of 2020 - leaving us with 98 authorities.
+
+The award-based authorities have hubs of sizes 1 to 646, while the in-degree authorities have hubs of sizes 51 to 732, clearly influenced by the individual definition of authority we have given them.
+
+The distribution of opinion-score per authority, as well as the avg. opinion score of their corresponding hub is visualized for each of the authority-definitions in the plot below:
+
+{% include ZoomNetwork7.html %}
+
+
+
+
+
+
+
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
