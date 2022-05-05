@@ -81,8 +81,8 @@ To do so, we need to visualize our Reddit data as a network!
 
 The visualisation shows the network of Redditors, where each link corresponds to a correspondence between them, either through *replying* or *being replied to* in any of the submissions or comments collected. The colors correspond to the average opinion of each Redditor, based on the average opinion of all their posts.
 
-* An average score of <img src="https://render.githubusercontent.com/render/math?math=$[-1,-1/3]$"> indicates an anti man-made climate change opinion - red
-* A score of <img src="https://render.githubusercontent.com/render/math?math=$]-1/3, 1/3[$"> corresponds to neutral - beige
+* An average score of <img src="https://render.githubusercontent.com/render/math?math=$[-1,-1/3]$"> indicates an anti man-made climate change opinion, and has been colored red
+* A score of <img src="https://render.githubusercontent.com/render/math?math=$]-1/3, 1/3[$"> corresponds to neutral, which is colored beige
 * While a score of <img src="https://render.githubusercontent.com/render/math?math=$[1/3,1]$"> indicates a pro man-made climate change opinion which, aptly, is colored green.
 
 As is seen, the network is dominated by the beige color - which shouldn't come as a surprise as we've previously seen that the yearly avg. is close to 0. The top nodes come in all colors, thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submission with many commenters, though it could also be a Redditor commenting on a lot of smaller posts.
@@ -133,12 +133,8 @@ Finally, the community-network of each community is visualized below.
 
 {% include ZoomNetwork5.html %}
 
-The second network, 'High on Anti', looks like it could indicate an echo-chamber at first, as the larger node has a majority of red-colored nodes around it. As none of the linked nodes have any connection to each-other, however, the network more likely seems to resemble that of an *authority node and its hub*!
+The second network, 'High on Anti', looks like it could indicate an echo-chamber at first, as the larger node has a majority of red-colored nodes around it. As none of the linked nodes have any connection to each-other, however, the structure more likely seems to resemble that of an *authority node* and its *hub*!
 
 **Authorities and hubs**
-
-
-
-
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
