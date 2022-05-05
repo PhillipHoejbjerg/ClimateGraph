@@ -1,4 +1,5 @@
 
+
 <h1> Human-made Climate Change discussion on Reddit </h1>
 
 ![Reddit Climate Change](https://media.vocativ.com/photos/2015/01/Reddit-Climate-Change-Poster2445147325.jpg)
@@ -188,8 +189,3 @@ However, though we saw correlation, we weren't able to conclude that the severit
 Once taking the analysis into a yearly perspective, looking at the influence Redditors have on one another, both in the case of echo-chambers and high-authority Redditors, we weren't able to conclude what we'd hoped, namely that the opinion of Redditors is reinforced or affected by the opinion of others.
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
-
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
