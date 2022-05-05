@@ -176,6 +176,14 @@ The two statistical tests show very different results!! However, the null-hypoth
 
 It is worth mentioning however, that a confidence level of 90% would flip the conclusion about the in-degree authorities! However, as the means of both the authority and hub are so close to being neutral, we can't possibly confidently say that authorities affect the opinion of others - even at 90% confidence.  
 
-Thus concludes our analysis of the Climate Change debate on the social network of Reddit. Though the analysis has taken us far and wide, into which factors can influence the opinion of Redditors regarding climate change, our statistical tests have time after time been unable to reject our null-hypotheses. We were however able to conclude that the opinion of Redditors regarding climate change was correlated with the amount of posts on any given day, while we also saw correlation between number of posts and the severity of climate change events on any given day, based on the amount of people affected. However, though we saw correlation, we weren't able to conclude that the severity Granger-caused the number of posts, and much less was unable to conclude any correlation to the opinion. Once taking the analysis into a yearly perspective, looking at the influence Redditors have on one another, both in the case of echo-chambers and high-authority Redditors, we weren't able to conclude what we'd hoped, namely that the opinion of Redditors is reinforced or affected by the opinion of others.
+**Conclusion**
+
+Thus concludes our analysis of the Climate Change debate on the social network of Reddit.
+
+Though the analysis has taken us far and wide, into which factors can influence the opinion of Redditors regarding climate change, our statistical tests have time after time been unable to reject our null-hypotheses.
+
+We were however able to conclude that the opinion of Redditors regarding climate change was correlated with the amount of posts on any given day, while we also saw correlation between number of posts and the severity of climate change events on any given day, based on the amount of people affected!
+ However, though we saw correlation, we weren't able to conclude that the severity Granger-caused the number of posts, and much less was unable to conclude any correlation to the opinion.
+ Once taking the analysis into a yearly perspective, looking at the influence Redditors have on one another, both in the case of echo-chambers and high-authority Redditors, we weren't able to conclude what we'd hoped, namely that the opinion of Redditors is reinforced or affected by the opinion of others.
 
 All our conclusions, however, heavily depend on whether we trust the decisions of our opinion classifier or not. And as such our conclusions would be more believable with a manually labeled opinion-dataset, however, this is simply not feasible when working with Big Data.
