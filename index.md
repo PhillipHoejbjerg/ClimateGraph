@@ -2,11 +2,11 @@
 
 <h1> Human-made Climate Change discussion on Reddit </h1>
 
-![Reddit Climate Change](docs/assets/Reddit-Climate-Change-Poster2445147325.jpeg)
+![Reddit Climate Change](https://media.vocativ.com/photos/2015/01/Reddit-Climate-Change-Poster2445147325.jpg)
 
 This blog-post investigates the phenomena of Climate Change, more specifically the "man-made or not"-discussion on Reddit and which factors influence the opinion of Redditors regarding the Climate Change discussion.
 
-The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. Each comment has been labeled with an opinion score through machine learning, either Pro, Anti or Neutral - understood as either believing, not believing or being neutral about man-made climate change. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. The data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through our [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph).
+The investigations are based on submissions and comments posted on Reddit, in the period of Fall 2014 to Spring 2022 - the period between the release of the 5th and 6th edition of the IPCC assessment report. The data consists of ??? comments and ??? submissions about climate change, from a total of ??? Redditors from a multitude of subreddits. Each comment has been labeled with an opinion score through machine learning, either Pro, Anti or Neutral - understood as either believing, not believing or being neutral about man-made climate change. In addition, real world data, in the shape of 1704 natural disasters in that same period, and the severity of these based on the amount of people affected has been downloaded from The international disasters database, EM-DAT. All of the data is available [here](https://drive.google.com/drive/folders/1e2uLI2JjoN1DJW5UrvhNofq_fbWcLBev), while the details of our analysis can be accessed through our [GitHub](https://github.com/albertkjoller/Reddit-ClimateGraph).
 
 The investigation will take us through the evolution of the opinion of Redditors through time, as well as look at some of the multiple different factors that could affect the opinion of the Redditors - namely the amount of engagement on the relevant subreddits of the social network, the severity of natural disasters in the real world, as well as whether the opinion of Redditors are affected by what is known as echo-chambers, or specific authorities in the social network.
 
@@ -36,7 +36,7 @@ We will try to answer this by diving deeper into the data, looking at the averag
 
 {% include Fig1hypeVsOpinion.html %}
 
-Plotting the daily opinion scores underneath the daily number of posts (comments and submissions) don't immediately provide any proof of one affecting the other. In fact, they don't seem to be correlated at all! Plotting them, one as a function of the other however, seems to tell a different story.
+Plotting the daily opinion scores underneath the daily number of posts (comments and submissions), don't immediately provide any proof of one affecting the other. In fact, they don't seem to be correlated at all! Plotting them, one as a function of the other however, seems to tell a different story.
 
 {% include Fig2numPostsOpinion.html %}
 
@@ -52,7 +52,7 @@ But just taking the time of event into account might not be enough - instead we 
 
 {% include fig5_SeverityVS.html %}
 
-The two plots seem to show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlations disagrees! With Pearson correlations of p-value 0.023 and 0.16 respectively, we can't conclude any correlation based on the opinion (with 95% confidence) - but we *can* say that the severity is correlated with the number of posts!
+The two plots seem to show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlation disagrees! With Pearson correlations of p-value 0.023 and 0.16 respectively, we can't conclude any correlation based on the *opinion* (with 95% confidence) - but we *can* say that the severity is correlated with the number of posts!
 
 Thinking of the kinds of data we have available, we can say with certainty that the number of posts, don't influence the severity of Natural Disasters - at least we hope not, as that would mean that posting on Reddit strengthens natural disasters :O)
 
@@ -69,23 +69,27 @@ After making sure that the time-series are stationary - independent of time - th
 | Severity -> Posts   | 0.28        |
 | Severity -> Opinion | 0.84        |
 
-However, the p-values suggests that the Severity don't Granger-cause neither number of posts or opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
+However, the p-values suggest that the Severity don't Granger-cause neither number of posts or opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
 
-So far, we have looked at whether the daily opinion of Redditors is affected by the number of posts or outside events, such as natural disasters. Now, our investigation will take a shift - For the next part of the investigation, we'd like to look at the interaction *between* Redditors, and how the opinion of one can affect the opinions of others.
+So far, we have looked at whether the daily opinion of Redditors is affected by the number of posts or outside events, such as natural disasters. Now, our investigation will take a shift - For the next part of the investigation, we'll tighten our scope by only taking the year of 2020 into consideration, as we'd like to look at the interaction *between* Redditors in a single year, and how the opinion of one can affect the opinions of others.
+
+**Echo-chambers of opinion**
 
 To do so, we need to visualize our Reddit data as a network!
 
 {% include ZoomNetwork1.html %}
 
+The visualisation shows the network of Redditors, where each link corresponds to a correspondence between them, either through *replying* or *being replied to* in any of the submissions or comments collected. The colors correspond to the average opinion of each Redditor, based on the average opinion of all their posts.
 
-The visualisation shows the network of Redditors, where each link corresponds to a correspondence between them, either through replying or being replied to in any of the submissions or comments collected. The colors correspond to the average opinion of each Redditor, based on the average of all their posts.
-An average score of <img src="https://render.githubusercontent.com/render/math?math=$[-1,-1/3]$"> indicates an anti man-made climate change opinion, and will be colored red. <img src="https://render.githubusercontent.com/render/math?math=$]-1/3, 1/3[$"> corresponds to neutral, beige, while <img src="https://render.githubusercontent.com/render/math?math=$[1/3,1]$"> indicates a pro man-made climate change opinion which, aptly, is colored green.
+* An average score of <img src="https://render.githubusercontent.com/render/math?math=$[-1,-1/3]$"> indicates an anti man-made climate change opinion - red
+* A score of <img src="https://render.githubusercontent.com/render/math?math=$]-1/3, 1/3[$"> corresponds to neutral - beige
+* While a score of <img src="https://render.githubusercontent.com/render/math?math=$[1/3,1]$"> indicates a pro man-made climate change opinion which, aptly, is colored green.
 
-As is seen, the network is dominated by the beige color - which might come as a surprise to some. The top nodes come in all colors, thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submissions with many commenters, though it could also be a Redditors commenting on a lot of smaller posts.
+As is seen, the network is dominated by the beige color - which shouldn't come as a surprise as we've previously seen that the yearly avg. is close to 0. The top nodes come in all colors, thereby opinions, while typically being linked to a lot of smaller nodes. This is probably due to a popular submission with many commenters, though it could also be a Redditor commenting on a lot of smaller posts.
 
 As mentioned, part of what we'd like to investigate is the concept of echo-chambers, i.e. environments where the opinion of users is reinforced by other users of similar opinion. This is explored through the concept of community structures - groups of nodes that are more connected internally than the rest of the network - as echo-chambers naturally would create some of these strongly interconnected nodes.
 
-In order to find these so-called communities, the Louvain algorithm will be applied on the network. Next, we will look at the opinion of the nodes within them, as echo-chambers would be indicated by a dominance of pro or anti opinions. This is based on *textual information* within communities, and as such we have, arbitrarily, excluded communities containing *less* than 80 nodes.
+In order to find these so-called communities, the Louvain algorithm will be applied on the network. Next - we will look at the opinion of the nodes within them, as echo-chambers would be indicated by a dominance of pro or anti opinions. This investigation is based on *textual information* within communities, and as such we have, arbitrarily, excluded communities containing *less* than 80 Redditors.
 
 {% include ZoomNetwork3.html %}
 
@@ -99,36 +103,41 @@ The final network, colored based on the Louivain partition, is seen above, while
 |:--------------:|:------------:|-------------|
 | **Modularity** |    0.0082    | 0.92        |
 
-The table shows how the original partition of only 3 communities is an almost undivided network, meaning there don't seem to be much of a rule about who's talking to who based on opinion. The newly found partitions have way higher modularity, however, that comes as no surprise as it's been split into 100 different communities.
+The table shows how the original partition of only 3 communities is an almost undivided network, meaning there don't seem to be much of a rule about who's talking to who based on opinion. The newly found partitions have way higher modularity, however, that comes as no surprise as it's been split into 100 different communities, in the best possible way according to Louvain.
 
 Diving into each of these communities, we can take a look at the distribution of opinions within them. Ideally, if we were to prove echo-chambers, we'd like to see a majority of one opinion within each, however as seen below, that is not the case.
 
 {% include ZoomNetwork4.html %}
 
-First of all, the figure clearly shows a majority of neutral opinions within each community, something that comes as no surprise after seeing the network. The top-most plot is sorted based on size of each community, while the bottom-most has been normalized to show the distribution within each. Once only considering the distribution of Pro vs. Anti, there seem to be a trend of Anti dominating the communities - something we also saw way back in the first plot of the blog-post. In general, however, none of the communities indicate echo-chambers of any opinion.
+First of all, the figure clearly shows a majority of neutral opinions within each community, something that comes as no surprise after seeing the network. The top-most plot is sorted based on size of each community, while the bottom-most has been normalized to show the distribution within each. Once only considering the distribution of Pro vs. Anti, there seem to be a trend of Anti dominating the communities - something we also saw hinted at way back in the first plot of the blog-post. In general, however, none of the communities indicate echo-chambers of any opinion.
 
-**Diving deeper into communities**
+In order to do *qualitative* analysis on the communities and their textual contents, we're diving further into 4 specific communities, one for each of the following criterias;
 
-In order to do qualitative analysis on the communities and their textual contents, we're diving further into 4 specific communities, based on the following criterias;
+* Neutral: Community with the largest proportion of neutral opinions.
 
-> Neutral: Community with the largest proportion of neutral opinions.
-> Anti: Community with the largest proportion of anti opinions.
-> Pro: Community with the largest proportion of pro opinions.
-> Balanced: Community with the smallest difference between its anti and pro proportions.
+* Anti: Community with the largest proportion of anti opinions.
+
+* Pro: Community with the largest proportion of pro opinions.
+
+* Balanced: Community with the smallest difference between its anti and pro proportions.
 
 {% include bar_all_4.html %}
 
-The bar-plots showing the distribution of each of the 4 communities is seen above, while the wordclouds, based on only the unique words of each community, is visualized below.
+The bar-plots showing the distribution of each of the 4 communities is seen above, while the wordclouds, based only on the unique words of each community, is visualized below.
 
 {% include ZoomNetwork6.html %}
 
-The Pro- wordcloud is full of words like 'forage', 'poultry', 'butcher', 'food' and 'science', while Anti- has words like 'superstitious', 'emission', 'repercussion' etc. - All words you'd expect to see in a climate debate. The blue *balanced* wordcloud however, funnily enough, seems as though it's made up of characters and places from *Game of Thrones*, such as 'Qarth', 'Daenerys' and 'Ramsay'.
+The Pro- wordcloud is full of words like 'forage', 'poultry', 'butcher' and 'science', while Anti- has words like 'superstitious', 'emission', 'repercussion' etc. - all of which are words you'd expect to see in a climate debate. The blue *balanced* wordcloud however, funnily enough, seems as though it's made up of characters and places from *Game of Thrones*, such as 'Qarth', 'Daenerys' and 'Ramsay'. Indicating that the Reddit querying keywords used,  might've had some overlap with the terminology of the Game of Thrones discussion on Reddit - This however, is only a single community out of an initial 8706.
 
-Finally, the community-network of each community is visualized below. The second network, 'High on Anti', could indicate an echo-chamber, as the larger node has a majority of red-colored nodes around it. Overall, however, that is the only indication of any echo-chambers so far.
+Finally, the community-network of each community is visualized below.
 
 {% include ZoomNetwork5.html %}
 
-The network could also indicate that the opinion of the hub is influenced by the larger middle-node, which is why we'll take a look at authorities and their effect on the hubs surrounding them later in this blogpost.
+The second network, 'High on Anti', looks like it could indicate an echo-chamber at first, as the larger node has a majority of red-colored nodes around it. As none of the linked nodes have any connection to each-other, however, the network more likely seems to resemble that of an *authority node and its hub*!
+
+**Authorities and hubs**
+
+
 
 
 
