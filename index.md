@@ -1,7 +1,7 @@
 
 
 <h1> Human-made Climate Change discussion on Reddit </h1>
-- Albert K. Jacobsen, Aron D. Jacobsen & Phillip C. Højbjerg
+<sub><sup>- Albert K. Jacobsen, Aron D. Jacobsen & Phillip C. Højbjerg</sup></sub>
 
 <center>
 <img src="https://media.vocativ.com/photos/2015/01/Reddit-Climate-Change-Poster2445147325.jpg" alt="Reddit Climate Change" width="600"/>
