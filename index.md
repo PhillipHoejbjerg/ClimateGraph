@@ -1,9 +1,12 @@
 
 
 <h1> Human-made Climate Change discussion on Reddit </h1>
+- Albert K. Jacobsen, Aron D. Jacobsen & Phillip C. Højbjerg
+
 <center>
 <img src="https://media.vocativ.com/photos/2015/01/Reddit-Climate-Change-Poster2445147325.jpg" alt="Reddit Climate Change" width="600"/>
 </center>
+
 
 This blog-post investigates the phenomena of Climate Change, more specifically the "man-made or not"-discussion on Reddit and which factors influence the opinion of Redditors regarding the Climate Change discussion.
 
@@ -30,7 +33,7 @@ This is tested by applying a paired statistical test on all Redditors present in
 
 <!---
 | **P-value**             | 0.78          | 0.17          | 0.88          | 0.019         | 0.00036       | 0.00061       | 0.00037       | 0.50          |
----> 
+--->
 
 Though we can't say much about the years prior, we see that the opinion of the specific Redditors change from year to year in the period of 2017-2021, with 95% confidence!
 
@@ -57,7 +60,7 @@ But just taking the time of event into account might not be enough - instead we 
 
 {% include fig5_SeverityVS.html %}
 
-The two plots seem to show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlation disagrees! Based on Pearson correlation test, we can't conclude any correlation based on the *opinion* (with 95% confidence) - but we *can* say that the severity is correlated with the number of posts! 
+The two plots seem to show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlation disagrees! Based on Pearson correlation test, we can't conclude any correlation based on the *opinion* (with 95% confidence) - but we *can* say that the severity is correlated with the number of posts!
 <!--- of p-value 0.023 and 0.16 respectively --->
 
 Thinking of the kinds of data we have available, we can say with certainty that the number of posts, don't influence the severity of Natural Disasters - at least we hope not, as that would mean that posting on Reddit strengthens natural disasters :O)
@@ -150,9 +153,9 @@ The second network, 'High on Anti', looks like it could indicate an echo-chamber
 
 The investigation of authority-nodes and the hubs surrounding them now brings us back to scale of the entire 2020 network graph. We're categorizing authority-nodes as Redditors of high importance, measured in total amount of Reddit-awards received per Redditor, as well as Redditors with high in-degree. The following will bring statistical tests on the opinion of both of these types of Authorities, compared to the hubs surrounding them - hoping to prove that the authority nodes are able to affect its surroundings. In other words - we want to see whether the opinion of Redditors is influenced by other Redditors of higher status.
 
-First off - as Reddit-awards are the highest form of recognition a Redditor can give another, the *award-based* authorities are defined as any Redditor having 1 award or higher - this definition leaves us with 135 authority-Redditors in the Reddit-graph. Meanwhile, the *in-degree based* authorities are defined as any node with 50 or more in-going edges - meaning, any Redditor who has been answered by at least 50 other Redditors regarding the climate debate in the year of 2020 - leaving us with 98 authorities.
+First off - as Reddit-awards are the highest form of recognition a Redditor can receive, the *award-based* authorities are defined as any Redditor having 1 award or higher - this definition leaves us with 135 authority-Redditors in the Reddit-graph. Meanwhile, the *in-degree based* authorities are defined as any node with 50 or more in-going edges - meaning, any Redditor who has been answered by at least 50 other Redditors regarding the climate debate in the year of 2020 - leaving us with 98 authorities.
 
-The award-based authorities have hubs of sizes 0 to 646, while the in-degree authorities have hubs of sizes 51 to 732, clearly influenced by the individual definition of authority we have given them - the ten "hubs" of size 0, and their corresponding authorities, have been removed from analysis, as empty hubs can't be regarded as hubs.
+The award-based authorities have hubs of sizes 0 to 646, while the in-degree authorities have hubs of sizes 51 to 732, clearly influenced by the individual definition of authority we have given them - the ten "hubs" of size 0, and their corresponding authorities, have been removed from analysis, as empty hubs shouldn't be regarded as hubs:)
 
 The distribution of opinion-score per authority, as well as the avg. opinion score of their corresponding hub is visualized for each of the authority-definitions in the plot below:
 
@@ -191,7 +194,7 @@ It is worth mentioning however, that a confidence level of 90% would flip the co
 
 Thus concludes our analysis of the Climate Change debate on the social network of Reddit.
 
-Though the analysis has taken us far and wide, into which factors can influence the opinion of Redditors regarding climate change, our statistical tests have time after time been unable to reject our null-hypotheses.
+Though the analysis has taken us far and wide, into which factors can influence the opinion of Redditors regarding climate change, our statistical tests have time and time again been unable to reject our null-hypotheses.
 
 We were however able to conclude that the opinion of Redditors regarding climate change was correlated with the amount of posts on any given day, while we also saw correlation between number of posts and the severity of climate change events on any given day, based on the amount of people affected!
 
