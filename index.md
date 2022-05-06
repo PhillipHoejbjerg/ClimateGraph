@@ -20,7 +20,7 @@ Firstly, we'd like to see how our data evolves on a yearly basis. The top-most p
 
 {% include TemporalEvolution.html %}
 
-The plot clearly shows that the discussion of climate on Reddit has been growing throughout the specific period. Note the tiny dot present in 2014, compared to the moderately sized point of 2022 - based on only 4 months of data. Furthermore it seems as though the general opinion is upward-trending, though minimally so. The average yearly opinion of the entire period is on the anti-side of the scale, very close to neutral however.
+The plot clearly shows that the discussion of climate on Reddit has been growing throughout the specific period. Please note the tiny dot present in 2014, and the moderately sized point of 2022 - are based on only 2 and 4 months of data respectively. Furthermore it seems as though the general opinion is upward-trending, though minimally so. The average yearly opinion of the entire period is on the anti-side of the scale, very close to neutral however.
 
 But one begins to wonder; is the upward trend due to Redditors changing their opinion, or is it simply due to the opinion of new Redditors joining the discussion.
 
