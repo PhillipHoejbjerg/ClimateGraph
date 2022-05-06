@@ -78,6 +78,7 @@ After making sure that the time-series are stationary - independent of time - th
 | Severity -> Posts   | 0.28        |
 | Severity -> Opinion | 0.84        |
 --->
+
 | Granger-test        | **X causes Y?** |
 |---------------------|-----------------|
 | Severity -> Posts   | False           |
@@ -196,7 +197,7 @@ Thus concludes our analysis of the Climate Change debate on the social network o
 
 Though the analysis has taken us far and wide, into which factors can influence the opinion of Redditors regarding climate change, our statistical tests have time and time again been unable to reject our null-hypotheses.
 
-We were however able to conclude that the opinion of Redditors regarding climate change was correlated with the amount of posts on any given day, while we also saw correlation between number of posts and the severity of climate change events on any given day, based on the amount of people affected!
+We were however able to conclude that the opinion of Redditors regarding climate change was correlated with the amount of posts on any given day, while we also saw correlation between number of posts and the severity of climate change events, based on the amount of people affected!
 
 However, though we saw correlation, we weren't able to conclude that the severity Granger-caused the number of posts, and much less was unable to conclude any correlation to the opinion.
 
