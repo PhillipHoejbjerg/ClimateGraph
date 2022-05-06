@@ -43,7 +43,8 @@ Plotting the daily opinion scores underneath the daily number of posts (comments
 
 {% include Fig2numPostsOpinion.html %}
 
-Now this is more interesting! The plot seems to show that days of *negative* avg. opinion, i.e. not believing in man-made climate change, contain way more posts than days of Pro opinion - finally, a Pearson correlation test <!---with a p-value of 0.0000 --->agrees, the two are correlated!
+Now this is more interesting! The plot seems to show that days of *negative* avg. opinion, i.e. not believing in man-made climate change, contain way more posts than days of Pro opinion - finally, a Pearson correlation test agrees, meaning that the two are correlated!
+ <!---with a p-value of 0.0000 --->
 
 Next - we'd like to see how outside sources, namely Natural Disasters, affect the opinion of the Redditors.
 
@@ -55,7 +56,8 @@ But just taking the time of event into account might not be enough - instead we 
 
 {% include fig5_SeverityVS.html %}
 
-The two plots seem to show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlation disagrees! With Pearson correlations of p-value 0.023 and 0.16 respectively, we can't conclude any correlation based on the *opinion* (with 95% confidence) - but we *can* say that the severity is correlated with the number of posts!
+The two plots seem to show the same story, namely that the severity of the natural disasters, don't affect either number of posts or opinion of the Redditors. However, the Pearson Correlation disagrees! Based on Pearson correlation test, we can't conclude any correlation based on the *opinion* (with 95% confidence) - but we *can* say that the severity is correlated with the number of posts! 
+<!--- of p-value 0.023 and 0.16 respectively --->
 
 Thinking of the kinds of data we have available, we can say with certainty that the number of posts, don't influence the severity of Natural Disasters - at least we hope not, as that would mean that posting on Reddit strengthens natural disasters :O)
 
@@ -66,13 +68,18 @@ But the opposite way of thinking is extremely interesting - do the severity of n
 The Granger Causality test is a test which indicates whether one time-series can help forecasting another - and as such could also be thought of as incorporating some form of attention span into the causality test, as we know the two won't happen simultaneously! Thus, what we'd like to check is whether the data within the downmost subplot is affecting the trends in the two topmost subplots.
 
 After making sure that the time-series are stationary - independent of time - through an ADF-test, we can perform the Granger causality test.
-
+<!---
 | Granger-test        | **P-value** |
 |---------------------|-------------|
 | Severity -> Posts   | 0.28        |
 | Severity -> Opinion | 0.84        |
+--->
+| Granger-test        | **X causes Y?** |
+|---------------------|-----------------|
+| Severity -> Posts   | False           |
+| Severity -> Opinion | False           |
 
-However, the p-values suggest that the Severity don't Granger-cause neither number of posts or opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
+However, the Granger causality tests suggest that the Severity don't Granger-cause neither number of posts or opinion of the Redditors. As such, though the amount of posts and the severity is correlated, we can't prove that one is affecting the other.
 
 So far, we have looked at whether the daily opinion of Redditors is affected by the number of posts or outside events, such as natural disasters. Now, our investigation will take a shift - For the next part of the investigation, we'll tighten our scope by only taking the year of 2020 into consideration, as we'd like to look at the interaction *between* Redditors in a single year, and how the opinion of one can affect the opinions of others.
 
@@ -104,7 +111,7 @@ The final network, colored based on the Louivain partition, is seen above, while
 
 |                | **Original** | **Louvain** |
 |:--------------:|:------------:|-------------|
-| **Modularity** |    0.0082    | 0.92        |
+| **Modularity** |    0.008     | 0.92        |
 
 The table shows how the original partition of only 3 communities is an almost undivided network, meaning there don't seem to be much of a rule about who's talking to who based on opinion. The newly found partitions have way higher modularity, however, that comes as no surprise as it's been split into 100 different communities, in the best possible way according to Louvain.
 
@@ -156,8 +163,8 @@ The mean opinion-scores of the authorities as well as their hubs are seen below.
 
 |                            | **In-degree** | **Awards** |
 |----------------------------|:--------------:|:----------:|
-| **Avg. Authority opinion** |    -0.027537   |  -0.05783  |
-| **Avg. Hub opinion**       |    -0.056896   |  -0.05791  |
+| **Avg. Authority opinion** |    -0.028      |  -0.058    |
+| **Avg. Hub opinion**       |    -0.057      |  -0.058    |
 
 
 As seen, the mean values between hub and authority are quite similar, which come as no surprise after seeing the plot - suggesting that we won't be able to conclude that authorities are able to affect the opinion of their hubs. However, the analysis can't be done without a statistical test!
@@ -166,8 +173,8 @@ As the standard unpaired t-test is a parametric test, it means that the variance
 
 |                            | **In-degree** | **Awards** |
 |----------------------------|:--------------:|:----------:|
-| **Var. Authority opinion** |    0.025611    |  0.032201  |
-| **Var. Hub opinion**       |    0.002478    |  0.006190  |
+| **Var. Authority opinion** |    0.026       |  0.032     |
+| **Var. Hub opinion**       |    0.002       |  0.006     |
 
 However, the variance of authority- vs. hub-opinion can't be regarded similar for either of the authority-definitions. As such, we'll need the Welch's t-test!
 
